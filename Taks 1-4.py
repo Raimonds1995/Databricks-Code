@@ -2,9 +2,7 @@
 #Task 1 (Rolling Dice)
 
 import random
-
 roll_dice = "Yes"
-
 while roll_dice:
     if roll_dice == "Yes":
         print("The random rolled  number is :", random.randint(1,6)) #(prints random number between 1-6)
@@ -16,17 +14,11 @@ while roll_dice:
         roll_dice = "No"
         print("Thanks for playing")
 break #(end of loop)
-    
-    
-
 
 # COMMAND ----------
 
 #Task 2 (Guess the randomly generated number)
-
 import random
-
-
 n = random.randint(1,50)                         #(The n is randomly generated to be between 1-50)
 guess = int(input("Enter Number between 1-50:")) #(ask user to input(converts it into integern) number between 1-50)
 while n!= guess:                                 #(if both aren't equal return true)
@@ -44,11 +36,8 @@ print("The number you guessed is correct")      #(if user enters connect number 
 # COMMAND ----------
 
 #Task 3 (Ask user for serious of worded input and them add them to story template)
-
 print("Please answer series  of questions to generate template")#(message in beginning to tell user what to do)
-
 #(Below is series of question, it will ask user to enter, before transfering data onto template)
-
 input1 = input("What is your name?") 
 input2 = input("Where are you from")
 input3 = input("What company do you work?")
@@ -59,17 +48,9 @@ input4 = input("Where is you company based")
 #input8 = 
 #input9 = 
 #input10 =  
-
 #(below is template that will be shown once required data is entered)
 
 print("Hi my name is" ,input1, "and I am from" ,input2, ",I work at" ,input3, "and our company is based at", input4)
-
-
-
-
-
-
-
 
 # COMMAND ----------
 

@@ -260,9 +260,9 @@ fig.tight_layout() # ensure data is more spreadout
 # Boxplots (2)
 outliers = dict(marker= '+', markerfacecolor='black')
 medians = dict(linewidth=2)
-voxes = np.array([dict(facecolor='r', color='r'),
+boxes = np.array([dict(facecolor='r', color='r'),
                  dict(facecolor='g', color='g'),
-                 dict(facecolor='b', colo='b')])
+                 dict(facecolor='b', color='b')])
 
 mylegend = [plt.scatter([0],[0], facecolor='r', edgecolor='r', label=species[0]),
             plt.scatter([0],[0], facecolor='g', edgecolor='g', label=species[1]),
@@ -280,11 +280,20 @@ for j in range(len(features)):#for each feature
         temp = data[indexes,j]
         ax.boxplot(temp, positions=[x],
                   widths = 2,
-                  path_artist=True,
+                  patch_artist=True,
                   medianprops=medians,
                   boxprops=boxes[i-1],
                   flierprops=outliers)
         x+= step
+
+# Add all labels to graph
+ax.set_title("Iris Data Set", fontsize=13, fontweight='bold')
+ax.set_ylabel("Values", fontweight='bold')
+ax.set_xticks(np.arange(step, x, 22))
+ax.set_xticklabels(features, fontweight='bold', rotation=45)
+ax.legend(handles=mylegend)
+fig.tight_layout() #Make sure that the axis labels fit the figure
+
 
 # COMMAND ----------
 

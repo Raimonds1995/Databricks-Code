@@ -259,7 +259,7 @@ fig.tight_layout() # ensure data is more spreadout
 
 # Boxplots (2)
 outliers = dict(marker= '+', markerfacecolor='black')
-medians = dict(linewidth=2)
+medians = dict(linewidth=2) 
 boxes = np.array([dict(facecolor='r', color='r'),
                  dict(facecolor='g', color='g'),
                  dict(facecolor='b', color='b')])
@@ -286,8 +286,8 @@ for j in range(len(features)):#for each feature
                   flierprops=outliers)
         x+= step
 
-# Add all labels to graph
-ax.set_title("Iris Data Set", fontsize=13, fontweight='bold')
+# Add all labels to graph 
+ax.set_title("Iris Data Set", fontsize=13, fontweight='bold') #set fontsize and type
 ax.set_ylabel("Values", fontweight='bold')
 ax.set_xticks(np.arange(step, x, 22))
 ax.set_xticklabels(features, fontweight='bold', rotation=45)
